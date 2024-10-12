@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.links-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-item {
+    margin-right: 20px;
+}
+
+.link-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-item a:hover {
+    color: #ccc;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s forwards; /* Apply fade-in animation */
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End state */
+    }
+}
+
+/* Travel Container */
+.travel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Travel Item */
+.travel-item {
+    margin: 20px;
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+/* Travel Item Image */
+.travel-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Scale Animation on Hover for Travel Items */
+.travel-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
